@@ -1,2 +1,2 @@
-# Learning_pattern
-设计模式学习
+# design-patterns
+java 设计模式
