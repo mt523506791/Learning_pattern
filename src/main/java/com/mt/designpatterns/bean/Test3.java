@@ -12,7 +12,7 @@ import org.springframework.core.env.Environment;
  * @Author maTao
  * @Date 2019/9/16 0016 上午 11:30
  **/
-@Configuration
+//@Configuration
 public class Test3 implements BeanPostProcessor {
 
     @Autowired
