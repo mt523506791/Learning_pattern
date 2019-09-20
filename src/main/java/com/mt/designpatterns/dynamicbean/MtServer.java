@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationContext;
 
 /**
  * @ClassName MtServer
- * @Description
+ * @Description  动态bena 的载入
  * @Author maTao
  * @Date 2019/7/12 0012 下午 15:55
  **/
