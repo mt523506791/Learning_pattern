@@ -6,8 +6,14 @@ package com.mt.designpatterns.deadlock;
  * @Author maTao
  * @Date 2019/9/20 0020 下午 17:22
  **/
-public class Deadlock {
+public class Deadlock implements Runnable{
 
+    private  Thread t;
+    private  String threadName;
+
+    public Deadlock(String threadName) {
+        this.threadName = threadName;
+    }
 
     /***
      * 方法一
@@ -33,27 +39,26 @@ public class Deadlock {
         }
     }
 
-      class  DeadlockString implements Runnable{
-        @Override
-        public void run() {
-            method1();
+
+    @Override
+    public void run() {
+        method1();
+        method2();
+    }
+
+    public void start () {
+        if (t == null) {
+            t = new Thread (this, threadName);
+            t.start ();
         }
     }
 
-
-     class DeadlockInteger extends Thread {
-        @Override
-        public void run() {
-            method2();
-        }
-
-    }
 
     public static void main(String[] args) {
-        Deadlock d = new Deadlock();
-        d.method1();
-        d.method2();
-
+        Deadlock R1 = new Deadlock( "Thread-1");
+        R1.start();
+        Deadlock R2 = new Deadlock( "Thread-2");
+        R2.start();
     }
 
 
