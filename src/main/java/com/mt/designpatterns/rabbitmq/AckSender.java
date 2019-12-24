@@ -38,7 +38,7 @@ public class AckSender implements RabbitTemplate.ReturnCallback {
 
     @Override
     public void returnedMessage(Message message, int i, String s, String s1, String s2) {
-        System.out.println("sender return success" + message.toString()+"==="+i+"==="+s1+"==="+s2);
+        System.out.println("sender returnedMessage success" + message.toString()+"==="+i+"==="+s1+"==="+s2);
     }
 
 
