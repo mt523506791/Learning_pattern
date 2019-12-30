@@ -9,7 +9,7 @@ package com.mt.designpatterns.login;
 public interface ILoginService {
 
     /**
-     *  原始登录方法
+     *  用户名密码登录方法
      * @param userName
      * @param password
      * @return
